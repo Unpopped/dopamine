@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css"/>
+    <title>Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<h1>
+    <text>Registration Page</text>
+</h1>
+<form th:action="@{/register.html}" method="post">
+    <label for="mail">Mail</label>
+    <input type="text" id="mail" name="mail" autofocus="autofocus"/> <br />
+    <label for="username">Username</label>:
+    <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
+    <label for="password">Password</label>:
+    <input type="password" id="password" name="password" /> <br />
+    <label for="passrpt">Repeat Password</label>
+    <input type="password" id="passrpt" name="passrpt" /> <br />
+</form>
+<div th:replace="fragments/general :: top"/>
+</body>
+</html>
